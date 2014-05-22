@@ -1,5 +1,5 @@
 //
-//  XNViewController.h
+//  PBSettingsViewController.h
 //  PlugableBrowser
 //
 //  Created by wuhaotian on 5/22/14.
@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "SVWebViewController.h"
 
-@interface XNViewController :UINavigationController
+@interface PBSettingsViewController :SVWebViewController
 @end

@@ -8,7 +8,7 @@
 
 #import "SVModalWebViewController.h"
 
-@interface SVWebViewController : UIViewController
+@interface SVWebViewController : UIViewController<UIWebViewDelegate>
 
 - (id)initWithAddress:(NSString*)urlString;
 - (id)initWithURL:(NSURL*)URL;
