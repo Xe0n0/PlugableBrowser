@@ -1,0 +1,19 @@
+PODS:
+  - ReactiveCocoa (2.3):
+    - ReactiveCocoa/UI
+  - ReactiveCocoa/Core (2.3):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3)
+  - ReactiveCocoa/UI (2.3):
+    - ReactiveCocoa/Core
+  - SVWebViewController (HEAD based on 1.0)
+
+DEPENDENCIES:
+  - ReactiveCocoa (~> 2.3)
+  - SVWebViewController (HEAD)
+
+SPEC CHECKSUMS:
+  ReactiveCocoa: 2066583826c17dde8e90c41e489f682048cc57c9
+  SVWebViewController: fbf917baa92744c54cfb89a52a4c056e409973a4
+
+COCOAPODS: 0.33.1
