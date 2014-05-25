@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4136FF08192DF0E0004A81D5 /* PBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4136FF07192DF0E0004A81D5 /* PBSettingsViewController.m */; };
+		4136FF0B192F37B4004A81D5 /* PBPluginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4136FF0A192F37B4004A81D5 /* PBPluginManager.m */; };
+		4136FF0D192F945B004A81D5 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4136FF0C192F945B004A81D5 /* JavaScriptCore.framework */; };
+		4136FF10193033C3004A81D5 /* PBPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4136FF0F193033C3004A81D5 /* PBPlugin.m */; };
 		414DC2BC192DC75300D0F456 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414DC2BB192DC75300D0F456 /* Foundation.framework */; };
 		414DC2BE192DC75300D0F456 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414DC2BD192DC75300D0F456 /* CoreGraphics.framework */; };
 		414DC2C0192DC75300D0F456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414DC2BF192DC75300D0F456 /* UIKit.framework */; };
@@ -22,6 +25,7 @@
 		414DC2DD192DC75300D0F456 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414DC2BF192DC75300D0F456 /* UIKit.framework */; };
 		414DC2E5192DC75300D0F456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 414DC2E3192DC75300D0F456 /* InfoPlist.strings */; };
 		414DC2E7192DC75300D0F456 /* PlugableBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 414DC2E6192DC75300D0F456 /* PlugableBrowserTests.m */; };
+		414DD0611930496F00FB689F /* IPGate.js in Resources */ = {isa = PBXBuildFile; fileRef = 414DD05E1930481200FB689F /* IPGate.js */; };
 		F1CD1CE84C9D4C1293FAD3E9 /* libPods-PlugableBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9D55DE76CC47CBB2C3DED7 /* libPods-PlugableBrowser.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +42,11 @@
 /* Begin PBXFileReference section */
 		4136FF06192DF0E0004A81D5 /* PBSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSettingsViewController.h; sourceTree = "<group>"; };
 		4136FF07192DF0E0004A81D5 /* PBSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBSettingsViewController.m; sourceTree = "<group>"; };
+		4136FF09192F37B4004A81D5 /* PBPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPluginManager.h; sourceTree = "<group>"; };
+		4136FF0A192F37B4004A81D5 /* PBPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPluginManager.m; sourceTree = "<group>"; };
+		4136FF0C192F945B004A81D5 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		4136FF0E193033C3004A81D5 /* PBPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBPlugin.h; sourceTree = "<group>"; };
+		4136FF0F193033C3004A81D5 /* PBPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBPlugin.m; sourceTree = "<group>"; };
 		414DC2B8192DC75300D0F456 /* PlugableBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlugableBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		414DC2BB192DC75300D0F456 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		414DC2BD192DC75300D0F456 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,6 +66,7 @@
 		414DC2E2192DC75300D0F456 /* PlugableBrowserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlugableBrowserTests-Info.plist"; sourceTree = "<group>"; };
 		414DC2E4192DC75300D0F456 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		414DC2E6192DC75300D0F456 /* PlugableBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlugableBrowserTests.m; sourceTree = "<group>"; };
+		414DD05E1930481200FB689F /* IPGate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IPGate.js; sourceTree = "<group>"; };
 		AD9D55DE76CC47CBB2C3DED7 /* libPods-PlugableBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlugableBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C8BC9062B42C4A81EF2AC /* Pods-PlugableBrowser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlugableBrowser.xcconfig"; path = "Pods/Pods-PlugableBrowser.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4136FF0D192F945B004A81D5 /* JavaScriptCore.framework in Frameworks */,
 				414DC2BE192DC75300D0F456 /* CoreGraphics.framework in Frameworks */,
 				414DC2C0192DC75300D0F456 /* UIKit.framework in Frameworks */,
 				414DC2BC192DC75300D0F456 /* Foundation.framework in Frameworks */,
@@ -89,6 +100,7 @@
 		414DC2AF192DC75300D0F456 = {
 			isa = PBXGroup;
 			children = (
+				414DD0601930481700FB689F /* Plugins */,
 				414DC2C1192DC75300D0F456 /* PlugableBrowser */,
 				414DC2E0192DC75300D0F456 /* PlugableBrowserTests */,
 				414DC2BA192DC75300D0F456 /* Frameworks */,
@@ -109,6 +121,7 @@
 		414DC2BA192DC75300D0F456 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4136FF0C192F945B004A81D5 /* JavaScriptCore.framework */,
 				414DC2BB192DC75300D0F456 /* Foundation.framework */,
 				414DC2BD192DC75300D0F456 /* CoreGraphics.framework */,
 				414DC2BF192DC75300D0F456 /* UIKit.framework */,
@@ -128,6 +141,10 @@
 				414DC2CD192DC75300D0F456 /* Main.storyboard */,
 				414DC2D0192DC75300D0F456 /* XNViewController.h */,
 				414DC2D1192DC75300D0F456 /* XNViewController.m */,
+				4136FF09192F37B4004A81D5 /* PBPluginManager.h */,
+				4136FF0A192F37B4004A81D5 /* PBPluginManager.m */,
+				4136FF0E193033C3004A81D5 /* PBPlugin.h */,
+				4136FF0F193033C3004A81D5 /* PBPlugin.m */,
 				414DC2D3192DC75300D0F456 /* Images.xcassets */,
 				414DC2C2192DC75300D0F456 /* Supporting Files */,
 			);
@@ -161,6 +178,14 @@
 				414DC2E3192DC75300D0F456 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		414DD0601930481700FB689F /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				414DD05E1930481200FB689F /* IPGate.js */,
+			);
+			name = Plugins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414DD0611930496F00FB689F /* IPGate.js in Resources */,
 				414DC2D4192DC75300D0F456 /* Images.xcassets in Resources */,
 				414DC2C6192DC75300D0F456 /* InfoPlist.strings in Resources */,
 				414DC2CF192DC75300D0F456 /* Main.storyboard in Resources */,
@@ -296,9 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4136FF0B192F37B4004A81D5 /* PBPluginManager.m in Sources */,
 				414DC2CC192DC75300D0F456 /* XNAppDelegate.m in Sources */,
 				414DC2D2192DC75300D0F456 /* XNViewController.m in Sources */,
 				414DC2C8192DC75300D0F456 /* main.m in Sources */,
+				4136FF10193033C3004A81D5 /* PBPlugin.m in Sources */,
 				4136FF08192DF0E0004A81D5 /* PBSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
