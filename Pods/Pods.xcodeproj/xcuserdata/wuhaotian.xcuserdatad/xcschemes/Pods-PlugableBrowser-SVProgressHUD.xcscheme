@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A15D7A2EC42407B8A417515"
-               BuildableName = "libPods-PlugableBrowser.a"
-               BlueprintName = "Pods-PlugableBrowser"
+               BlueprintIdentifier = "48F17FDC36F548049CFAFDAC"
+               BuildableName = "libPods-PlugableBrowser-SVProgressHUD.a"
+               BlueprintName = "Pods-PlugableBrowser-SVProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

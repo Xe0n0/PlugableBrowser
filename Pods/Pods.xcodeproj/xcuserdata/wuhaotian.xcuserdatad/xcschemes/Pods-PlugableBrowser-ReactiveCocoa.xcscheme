@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "89FBB466316F4C8F9063B21C"
+               BlueprintIdentifier = "3AC70548BDEC499E88AE9265"
                BuildableName = "libPods-PlugableBrowser-ReactiveCocoa.a"
                BlueprintName = "Pods-PlugableBrowser-ReactiveCocoa"
                ReferencedContainer = "container:Pods.xcodeproj">

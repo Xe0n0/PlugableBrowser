@@ -41,6 +41,7 @@ install_resource()
       ;;
   esac
 }
+install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack.png"
 install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack@2x.png"
 install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerNext.png"

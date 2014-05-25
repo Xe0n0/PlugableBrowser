@@ -3,6 +3,7 @@
 
 target "PlugableBrowser" do
   pod 'SVWebViewController', :head
+  pod 'SVProgressHUD', :head
   pod 'ReactiveCocoa', '~> 2.3'
 end
 
