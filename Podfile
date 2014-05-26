@@ -5,6 +5,7 @@ target "PlugableBrowser" do
   pod 'SVWebViewController', :head
   pod 'SVProgressHUD', :head
   pod 'ReactiveCocoa', '~> 2.3'
+  pod "AFNetworking", "~> 2.2.4"
 end
 
 target "PlugableBrowserTests" do

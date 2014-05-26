@@ -10,6 +10,7 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 
 typedef enum {
+  
   PluginEventLoaded = 1,
   
   WebViewEventShouldLoad = 11,
@@ -22,9 +23,14 @@ typedef enum {
 
 @protocol PBAppProtocol <JSExport>
 
-- (void)sendNotification:(JSValue *)value;
-
+- (void)showSuccessHUD:(NSString *)message;
+- (void)showErrorHUD:(NSString *)message;
+JSExportAs(addToolButton,
+- (void)addToolButton:(JSValue *)callback withTitle:(NSString *)title
+           );
 @end
+
+@class PBWebViewController;
 
 @interface PBPluginManager : NSObject <PBAppProtocol>
 
@@ -32,4 +38,5 @@ typedef enum {
 - (void)loadAllPlugins;
 - (void)loadPluginAtPath:(NSString *)string;
 - (BOOL)feedEvent:(PBJSEvent )event;
+@property (assign, nonatomic) PBWebViewController *webVC;
 @end

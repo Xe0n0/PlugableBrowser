@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A15D7A2EC42407B8A417515"
+               BlueprintIdentifier = "4BE6A53E8CF441799F010933"
                BuildableName = "libPods-PlugableBrowser.a"
                BlueprintName = "Pods-PlugableBrowser"
                ReferencedContainer = "container:Pods.xcodeproj">

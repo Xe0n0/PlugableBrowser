@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlugableBrowser/PBPluginManager.m"
-            timestampString = "422596048.754609"
+            timestampString = "422816630.702841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-loadAllPlugins"
             landmarkType = "5">
          </BreakpointContent>

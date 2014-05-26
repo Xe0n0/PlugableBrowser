@@ -26,6 +26,8 @@
 		414DC2E5192DC75300D0F456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 414DC2E3192DC75300D0F456 /* InfoPlist.strings */; };
 		414DC2E7192DC75300D0F456 /* PlugableBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 414DC2E6192DC75300D0F456 /* PlugableBrowserTests.m */; };
 		414DD0611930496F00FB689F /* IPGate.js in Resources */ = {isa = PBXBuildFile; fileRef = 414DD05E1930481200FB689F /* IPGate.js */; };
+		41E374A8193229B700C57F7F /* PBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E374A7193229B700C57F7F /* PBWebViewController.m */; };
+		41E374AC193238B700C57F7F /* PBRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E374AB193238B700C57F7F /* PBRequestManager.m */; };
 		F1CD1CE84C9D4C1293FAD3E9 /* libPods-PlugableBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9D55DE76CC47CBB2C3DED7 /* libPods-PlugableBrowser.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,11 @@
 		414DC2E4192DC75300D0F456 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		414DC2E6192DC75300D0F456 /* PlugableBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlugableBrowserTests.m; sourceTree = "<group>"; };
 		414DD05E1930481200FB689F /* IPGate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = IPGate.js; sourceTree = "<group>"; };
+		41E374A6193229B700C57F7F /* PBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBWebViewController.h; sourceTree = "<group>"; };
+		41E374A7193229B700C57F7F /* PBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBWebViewController.m; sourceTree = "<group>"; };
+		41E374A9193237B400C57F7F /* PBJSExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBJSExport.h; sourceTree = "<group>"; };
+		41E374AA193238B700C57F7F /* PBRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBRequestManager.h; sourceTree = "<group>"; };
+		41E374AB193238B700C57F7F /* PBRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBRequestManager.m; sourceTree = "<group>"; };
 		AD9D55DE76CC47CBB2C3DED7 /* libPods-PlugableBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlugableBrowser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C8BC9062B42C4A81EF2AC /* Pods-PlugableBrowser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlugableBrowser.xcconfig"; path = "Pods/Pods-PlugableBrowser.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +143,8 @@
 			children = (
 				4136FF06192DF0E0004A81D5 /* PBSettingsViewController.h */,
 				4136FF07192DF0E0004A81D5 /* PBSettingsViewController.m */,
+				41E374A6193229B700C57F7F /* PBWebViewController.h */,
+				41E374A7193229B700C57F7F /* PBWebViewController.m */,
 				414DC2CA192DC75300D0F456 /* XNAppDelegate.h */,
 				414DC2CB192DC75300D0F456 /* XNAppDelegate.m */,
 				414DC2CD192DC75300D0F456 /* Main.storyboard */,
@@ -143,6 +152,9 @@
 				414DC2D1192DC75300D0F456 /* XNViewController.m */,
 				4136FF09192F37B4004A81D5 /* PBPluginManager.h */,
 				4136FF0A192F37B4004A81D5 /* PBPluginManager.m */,
+				41E374A9193237B400C57F7F /* PBJSExport.h */,
+				41E374AA193238B700C57F7F /* PBRequestManager.h */,
+				41E374AB193238B700C57F7F /* PBRequestManager.m */,
 				4136FF0E193033C3004A81D5 /* PBPlugin.h */,
 				4136FF0F193033C3004A81D5 /* PBPlugin.m */,
 				414DC2D3192DC75300D0F456 /* Images.xcassets */,
@@ -323,7 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4136FF0B192F37B4004A81D5 /* PBPluginManager.m in Sources */,
+				41E374A8193229B700C57F7F /* PBWebViewController.m in Sources */,
 				414DC2CC192DC75300D0F456 /* XNAppDelegate.m in Sources */,
+				41E374AC193238B700C57F7F /* PBRequestManager.m in Sources */,
 				414DC2D2192DC75300D0F456 /* XNViewController.m in Sources */,
 				414DC2C8192DC75300D0F456 /* main.m in Sources */,
 				4136FF10193033C3004A81D5 /* PBPlugin.m in Sources */,

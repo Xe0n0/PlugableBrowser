@@ -9,10 +9,11 @@
 #import "XNViewController.h"
 #import "SVModalWebViewController.h"
 #import "PBSettingsViewController.h"
+#import "PBPluginManager.h"
 
 @interface XNViewController ()
 
-@property (strong, nonatomic) SVWebViewController *webVC;
+@property (strong, nonatomic) PBWebViewController *webVC;
 @end
 
 @implementation XNViewController
@@ -22,7 +23,8 @@
   self = [super initWithCoder:aDecoder];
   
   if (self) {
-    self.webVC = [[SVWebViewController alloc] initWithAddress:@"https://www.google.com.hk"];
+    self.webVC = [[PBWebViewController alloc] initWithAddress:@"https://www.google.com.hk"];
+    [[PBPluginManager sharedManager] setWebVC:self.webVC ];
     [self setViewControllers:@[self.webVC]];
   }
   
@@ -51,6 +53,12 @@
   [super viewWillAppear:NO];
   self.webVC.title = self.title;
   self.navigationBarHidden = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
+  [[PBPluginManager sharedManager] loadAllPlugins];
+  
 }
 
 @end

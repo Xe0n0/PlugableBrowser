@@ -9,6 +9,7 @@
 #import "SVModalWebViewController.h"
 
 @interface SVWebViewController : UIViewController<UIWebViewDelegate>
+@property (nonatomic, retain) NSMutableArray *arrayToolButtons;
 
 - (id)initWithAddress:(NSString*)urlString;
 - (id)initWithURL:(NSURL*)URL;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SVWebViewController.h"
+#import "PBWebViewController.h"
 
 @interface XNViewController :UINavigationController
 @end

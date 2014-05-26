@@ -30,6 +30,6 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
   
   [super webViewDidFinishLoad:webView];
-  self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"Browser Store"];
+  self.navigationItem.title = @"Browser Store";
 }
 @end

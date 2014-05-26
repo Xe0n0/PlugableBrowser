@@ -54,6 +54,7 @@
     
     if(self = [super init]) {
         self.URL = pageURL;
+        self.arrayToolButtons = [NSMutableArray array];
     }
     
     return self;
@@ -204,17 +205,26 @@
     }
     
     else {
-        NSArray *items = [NSArray arrayWithObjects:
+        NSMutableArray *items = [NSMutableArray arrayWithObjects:
                           fixedSpace,
                           self.backBarButtonItem,
                           flexibleSpace,
                           self.forwardBarButtonItem,
                           flexibleSpace,
                           refreshStopBarButtonItem,
-                          flexibleSpace,
+                                 flexibleSpace,nil];
+      
+      for (id item  in self.arrayToolButtons) {
+        
+        [items addObject:flexibleSpace];
+        [items addObject:item];
+        
+      }
+      
+      [items addObjectsFromArray:@[
                           self.actionBarButtonItem,
-                          fixedSpace,
-                          nil];
+                          fixedSpace
+                          ]];
         
         self.navigationController.toolbar.barStyle = self.navigationController.navigationBar.barStyle;
         self.navigationController.toolbar.tintColor = self.navigationController.navigationBar.tintColor;

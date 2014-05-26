@@ -8,6 +8,8 @@
 
 #import "PBPluginManager.h"
 #import "PBPlugin.h"
+#import "SVProgressHUD.h"
+#import "PBWebViewController.h"
 
 @interface PBPluginManager ()
 
@@ -84,6 +86,29 @@
   }
   
   return YES;
+}
+
+- (void)showSuccessHUD:(NSString *)message {
+  [SVProgressHUD showSuccessWithStatus:message];
+}
+
+- (void)showErrorHUD:(NSString *)message {
+  [SVProgressHUD showErrorWithStatus:message];
+}
+
+- (void)addToolButton:(JSValue *)callback withTitle:(NSString *)title {
+  
+  UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:nil action:nil];
+  item.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+    
+    [callback callWithArguments:nil];
+    
+    return [RACSignal empty];
+    
+  }];
+  
+  [self.webVC.arrayToolButtons addObject:item];
+  
 }
 
 @end

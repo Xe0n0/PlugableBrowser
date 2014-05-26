@@ -36,7 +36,6 @@
     NSLog(@"%@", error);
   }
   
-  [[PBPluginManager sharedManager] loadAllPlugins];
   return YES;
 }
 							

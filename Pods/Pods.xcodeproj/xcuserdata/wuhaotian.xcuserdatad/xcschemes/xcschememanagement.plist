@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-PlugableBrowser-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PlugableBrowser-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A15D7A2EC42407B8A417515</key>
+		<key>0EC6B6BD18204A0988CF9B81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3AC70548BDEC499E88AE9265</key>
+		<key>32FC64958082475583551EB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>48F17FDC36F548049CFAFDAC</key>
+		<key>4BE6A53E8CF441799F010933</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9534948C3E4D4A74AE3DC423</key>
+		<key>668D4FCEAC5B4B34921550E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC40BEF4FF8A4F91A1A02CDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

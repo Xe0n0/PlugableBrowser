@@ -8,6 +8,7 @@
 
 #import "PBPlugin.h"
 #import "PBPluginManager.h"
+#import "PBRequestManager.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @interface PBPlugin ()
@@ -35,7 +36,7 @@
   
   self.context[@"console"] = console;
   self.context[@"App"] = [PBPluginManager sharedManager];
-  
+  self.context[@"Http"] = [PBRequestManager manager];
   NSString* js = [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:path] encoding:NSUTF8StringEncoding];
   
   [self.context evaluateScript:js];
