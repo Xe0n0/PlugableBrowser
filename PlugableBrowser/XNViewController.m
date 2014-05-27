@@ -40,7 +40,7 @@
   
   self.webVC.navigationItem.leftBarButtonItem.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
     
-    PBSettingsViewController *settingsVC = [[PBSettingsViewController alloc] initWithAddress:@"http://www.pku.edu.cn"];
+    PBSettingsViewController *settingsVC = [[PBSettingsViewController alloc] initWithAddress:@"http://127.0.0.1:8000/BrowserStore"];
     
     [self pushViewController:settingsVC animated:YES];
     return [RACSignal empty];

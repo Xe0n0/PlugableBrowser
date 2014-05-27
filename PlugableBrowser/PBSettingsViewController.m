@@ -7,6 +7,9 @@
 //
 
 #import "PBSettingsViewController.h"
+#import "XNAppDelegate.h"
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
 
 @interface PBSettingsViewController ()
 
@@ -31,5 +34,42 @@
   
   [super webViewDidFinishLoad:webView];
   self.navigationItem.title = @"Browser Store";
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+  if ([request.URL.scheme  isEqualToString: @"pb-plugin"]) {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSString *real_path = [NSString stringWithFormat:@"http://127.0.0.1:8000%@", request.URL.path];
+    NSURL *URL = [NSURL URLWithString:real_path];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+      
+//      NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+      
+      NSFileManager *fm = [NSFileManager defaultManager];
+      NSError *error;
+      NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+      
+      
+      NSString *directory = [paths[0] stringByAppendingPathComponent:@"Plugins"];
+      NSURL *plugin_directory = [NSURL fileURLWithPath:directory];
+      if (![fm fileExistsAtPath:directory isDirectory:NULL]) {
+        if (![fm createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:&error])
+          NSLog(@"%@", error);
+      }
+      
+      return [plugin_directory URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+      
+      [SVProgressHUD showSuccessWithStatus:@"插件已下载"];
+      NSLog(@"File downloaded to: %@", filePath);
+    }];
+    [downloadTask resume];
+    return NO;
+  }
+  return YES;
 }
 @end
