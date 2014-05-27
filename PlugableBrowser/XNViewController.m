@@ -11,7 +11,7 @@
 #import "PBSettingsViewController.h"
 #import "PBPluginManager.h"
 
-@interface XNViewController ()
+@interface XNViewController () <UITextFieldDelegate>
 
 @property (strong, nonatomic) PBWebViewController *webVC;
 @end
@@ -46,6 +46,22 @@
     return [RACSignal empty];
   }];
 
+  UITextField *input =
+   [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
+  input.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.4];
+  [input.rac_textSignal subscribeNext:^(id x) {
+    
+  }];
+  self.webVC.navigationItem.titleView = input;
+  
+  input.delegate = self;
+  input.keyboardType = UIKeyboardTypeURL;
+
+  [input setReturnKeyType:UIReturnKeyGo];
+  
+  input.autocapitalizationType = UITextAutocapitalizationTypeNone;
+
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,4 +77,13 @@
   
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+
+  [self.webVC loadURLString:textField.text];
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+  [textField resignFirstResponder];
+  return YES;
+}
 @end

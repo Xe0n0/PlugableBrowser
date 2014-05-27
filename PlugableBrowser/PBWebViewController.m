@@ -10,12 +10,23 @@
 #import "PBPluginManager.h"
 
 @interface PBWebViewController ()
+@property (nonatomic, strong) UITextField *input;
 
 @end
 
 @implementation PBWebViewController
 
 #pragma mark - UIWebViewDelegate
+
+- (void)loadView {
+  [super loadView];
+  
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+}
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
   [super webViewDidStartLoad:webView];
@@ -33,4 +44,8 @@
   [[PBPluginManager sharedManager] feedEvent:WebViewEventErrorLoading];
 }
 
+- (void)loadURLString:(NSString *)path {
+  NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", path]];
+  [(UIWebView *)self.view loadRequest:[NSURLRequest requestWithURL:url]];
+}
 @end

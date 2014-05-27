@@ -5,6 +5,7 @@ const Event = {
   WebViewEventFinished: 13,
   WebViewErrorLoading: 14,
 }
+var noNeed = false;
 
 var Plugin = function(){
 
@@ -27,6 +28,7 @@ var Plugin = function(){
     },
 
     Connect: function() {
+      if (noNeed) return;
 
         var url = 'https://its.pku.edu.cn:5428/ipgatewayofpku?uid=00904701&password=19910103&timeout=2&range=2&operation=connect';
 
@@ -38,6 +40,7 @@ var Plugin = function(){
             if (success == 'YES') {
               var desc = /FR_DESC_CN=([^ ]*)/.exec(responseText)[1];
               App.showSuccessHUD("已连接\n" + desc);
+              noNeed = true;
             }
             else if (success == 'NO') {
               var reason = /REASON=([^ ]*)/.exec(responseText)[1];
