@@ -11,4 +11,5 @@
 @interface PBWebViewController : SVWebViewController
 
 - (void)loadURLString:(NSString *)url;
+- (void)eval:(NSString *)string;
 @end

@@ -25,13 +25,13 @@
       NSLog(@"%@", error);
   }
   
-  NSString *path = [[NSBundle mainBundle] pathForResource:@"IPGate" ofType:@"js"];
+//  NSString *path = [[NSBundle mainBundle] pathForResource:@"IPGate" ofType:@"js"];
   NSString *toPath = [directory stringByAppendingPathComponent:@"IPGate.js"];
   
   if ([fm fileExistsAtPath:toPath isDirectory:NULL]) {
-    [fm removeItemAtPath:toPath error:NULL];
+//    [fm removeItemAtPath:toPath error:NULL];
   }
-  [fm copyItemAtPath:path toPath:toPath error:&error];
+//  [fm copyItemAtPath:path toPath:toPath error:&error];
   if (error) {
     NSLog(@"%@", error);
   }

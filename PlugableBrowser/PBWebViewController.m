@@ -48,4 +48,8 @@
   NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", path]];
   [(UIWebView *)self.view loadRequest:[NSURLRequest requestWithURL:url]];
 }
+
+- (void)eval:(NSString *)string {
+  [(UIWebView *)self.view stringByEvaluatingJavaScriptFromString:string];
+}
 @end

@@ -28,6 +28,7 @@ typedef enum {
 JSExportAs(addToolButton,
 - (void)addToolButton:(JSValue *)callback withTitle:(NSString *)title
            );
+- (void)exec:(NSString *)string;
 @end
 
 @class PBWebViewController;

@@ -111,4 +111,8 @@
   
 }
 
+- (void)exec:(NSString *)string {
+  [self.webVC eval:string];
+}
+
 @end
