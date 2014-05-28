@@ -44,6 +44,7 @@
 
 - (void)loadAllPlugins
 {
+  [self.arrayPlugins removeAllObjects];
   if (!self.rootPath) {
     self.rootPath = @"Plugins";
   }

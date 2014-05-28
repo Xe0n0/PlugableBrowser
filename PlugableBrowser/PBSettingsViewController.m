@@ -10,6 +10,8 @@
 #import "XNAppDelegate.h"
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
+#import "PBPluginManager.h"
+
 
 @interface PBSettingsViewController ()
 
@@ -66,6 +68,8 @@
       
       [SVProgressHUD showSuccessWithStatus:@"插件已下载"];
       NSLog(@"File downloaded to: %@", filePath);
+      [[PBPluginManager sharedManager] loadAllPlugins];
+      
     }];
     [downloadTask resume];
     return NO;

@@ -29,7 +29,7 @@
   NSString *toPath = [directory stringByAppendingPathComponent:@"IPGate.js"];
   
   if ([fm fileExistsAtPath:toPath isDirectory:NULL]) {
-    [fm removeItemAtPath:toPath error:NULL];
+//    [fm removeItemAtPath:toPath error:NULL];
   }
 //  [fm copyItemAtPath:path toPath:toPath error:&error];
   if (error) {
