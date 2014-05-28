@@ -26,7 +26,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-  self.navigationController.navigationBarHidden = YES;
+//  self.navigationController.navigationBarHidden = YES;
   self.navigationItem.title = @"Browser Store";
 }
 
